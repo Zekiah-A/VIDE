@@ -1,5 +1,5 @@
 //import gg
-//import gx
+import gx //This was used in rectangles to make colours so that's what it does
 import os
 import ui
 
@@ -44,8 +44,8 @@ fn main() {
 		}, [
 			
 			ui.picture(
-				width: 1000
-				height: 2 //25 
+				width: 1000 //TODO: MAKE THIS SCALE DYNAMICALLY
+				height: 2
 				path: os.resource_abs_path('HackFix.png')
 			) //DO NOT REMOVE! - HACK image to stop code break.
 			
@@ -55,8 +55,7 @@ fn main() {
 					top:5
 					bottom: 5
 				}
-				//widths: [ui.compact, 300.] //spaces out elements
-				spacing: 15
+				spacing: 15 //spaces out elements
 			}, [
 				ui.picture(
 					width: 125
@@ -80,6 +79,15 @@ fn main() {
 					width: 100
 					height: 25
 					text: "Open terminal"
+					//on_click: terminal_click_fn()
+				),
+				ui.rectangle(
+					color: gx.rgb(220, 220, 220) //100,100,255
+				), //cool shape
+				ui.button(
+					width: 50
+					height: 25
+					text: "▷"
 					//on_click: terminal_click_fn()
 				)
 			]),
@@ -114,6 +122,7 @@ fn load_click_fn(a voidptr, b voidptr){
 fn terminal_click_fn(a voidptr, b voidptr){
 
 }
+
 /*
 fn btn_save_click(a voidptr, b voidptr){
 	mut app := &App{
@@ -143,6 +152,7 @@ fn (app &App) draw() {
 	app.gg.draw_empty_rect(110, 150, 80, 40, gx.black)
 	app.gg.draw_image(230, 30, app.image.width, app.image.height, app.image)
 }
-*/
 
-//fn draw_suggestions(x int, y int, z int, contents []string){}
+
+fn draw_suggestions(x int, y int, z int, contents []string){}
+*/
