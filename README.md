@@ -1,4 +1,4 @@
-# VIDE
+# V-IDE
 Basic IDE written in V UI for the V programming language. Produced by StarlkYT and zekiahepic
 
 This ide has no dependencies except from the `V` programming language to build from source.
